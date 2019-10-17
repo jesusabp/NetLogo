@@ -28,7 +28,6 @@ to setup
   setup-backlogs
   setup-bi
   reset-ticks
-  watch sample-bi
 end
 
 to setup-globals
@@ -37,7 +36,7 @@ to setup-globals
   set sbcolor yellow
   set number-of-bis 300
   set outcolor black
-  set sample-bi one-of turtles
+
 end
 
 to setup-patches
@@ -56,6 +55,8 @@ to setup-bi
   ;ask turtles [ setxy -15 random-ycor ]
   ;ask turtles [ setxy random-xcor random-ycor ]
   ask turtles [ setxy -15 0 set heading 90 ]
+  set sample-bi one-of turtles
+  watch sample-bi
 end
 
 ; TO GO (Main fucntion)
@@ -200,7 +201,6 @@ end
 
 ; There is a deeper alternative that will more dramatically improve cycle time: Discard that system and the bottlenecks and WIP queues it spawns. If you adopt cross-functional feature teams that do complete features (analysis, programming, and testing) without handing off work to other groups, and that apply automated acceptance test-driven development and automated continuous deployment, the above WIP queues vanish by moving from serial to parallel development.
 ; The essential point to grasp is that an item (such as a requirement request) starts sitting in a queue waiting for service long before people are 100 percent utilized. It is also fascinating to see the impact of increased utilization of people on cycle time: As utilization goes up in a system with lots of variability, average cycle time gets worse, not better. This is counterintuitive to an average accountant or management consultant who has been taught to “improve productivity by increasing utilization of resources.” Most have not been exposed to queueing theory—how to understand stochastic systems with queues (people doing work with variability)—and so demonstrate a thinking mistake.
-
 @#$#@#$#@
 GRAPHICS-WINDOW
 310
